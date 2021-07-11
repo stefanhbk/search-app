@@ -1,0 +1,37 @@
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 150px 20px 0;
+    height: calc( 100vh - 230px);
+    background-image:
+        linear-gradient(
+            rgba($black, .3),
+            rgba($black, .3)
+        ),
+        url('./../images/letters-banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h2 {
+        margin-bottom: 35px;
+        color: $alice-blue;
+        transition: color .5s ease;
+        cursor: pointer;
+
+        &:hover {
+            color: $abbey;
+        }
+    }
+
+    @include respond(tab-land) {
+        padding-top: 50px;
+        height: calc( 100vh - 130px);
+    }
+
+    @include respond(tablet) {
+        padding-top: 35px;
+        height: calc( 100vh - 115px);
+    }
+}

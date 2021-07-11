@@ -1,0 +1,45 @@
+.list-wrapper {
+    margin-top: 20px;
+    width: 50%;
+    
+    .list {
+        list-style-type: none;
+        padding: 20px 0;
+        transform: skew(-3deg, 1deg);
+        max-height: 550px;
+        overflow: hidden;
+        overflow-y: auto;
+
+        &__item {
+            padding: 10px 20px;
+            background: rgba($white, .3);
+            color: $coral;
+            border: 1px solid $white;
+            cursor: pointer;
+            transition: background-color .5s ease;
+
+            &:hover {
+                background: rgba($coral, .7);
+                color: $white;
+            }
+
+            &__title,
+            &__intro {
+                display: block;
+                text-align: center;
+            }
+
+            &__title {
+                margin-bottom: 5px;
+            }
+        }
+
+        @include respond(tablet) {
+            transform: skew(0);
+        }
+    }
+
+    @include respond(tablet) {
+        width: 100%;
+    }
+}

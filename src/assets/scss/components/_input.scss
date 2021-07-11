@@ -1,0 +1,32 @@
+input{
+    display: flex;
+    margin: 0 auto;
+    padding: 15px;
+    width: 50%;
+    height: 60px;    
+    background-color: $white;
+    border: 2px solid $black;
+    color: $abbey;
+    font-size: 16px;
+    font-family: $primary;
+    box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba($black, .6);
+    transform: skew(-3deg, 1deg);
+    letter-spacing: 2px;
+
+    &:hover,
+    &:focus,
+    &:visited {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $coral;
+    }
+
+    @include respond(tablet) {
+        width: 80%;
+        height: 30px;
+        font-size: 14px;
+        transform: skew(0);
+    }
+} 
